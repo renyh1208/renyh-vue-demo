@@ -10,7 +10,7 @@ export default {
     return rest.data
   },
   sections: async() => {
-    const rest = await axios.get(`/api/organizations/actions/query`)
+    const rest = await axios.get(`/api/organizations/queryAll`)
     return rest.data
   },
   create: async(form) => {
