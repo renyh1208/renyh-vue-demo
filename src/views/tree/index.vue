@@ -90,10 +90,16 @@
       async loadNode1s (node, resolve) {
         this.node = node
         if (node.level === 0) {
+          console.log("========================================")
+          console.log(node.level)
+          console.log("========================================")
           let resp = await groupApi.roleList(node.level)
           return resolve(resp.data)
         }
         if (node.level > 0) {
+          console.log("========================================")
+          console.log(node.data.oid)
+          console.log("========================================")
           let resp = await groupApi.roleList(node.data.oid)
           return resolve(resp.data)
         }
